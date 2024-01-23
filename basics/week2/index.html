@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        h2{
+            color: navy;
+            text-align: center;
+        }
+        ul{
+       display: block;
+       margin: 1rem auto;
+        }
+        
+        li{
+            list-style: none;
+            padding: 10px;
+            transition: all 200ms ease-in-out;
+            text-align: center;
+            max-width: 400px;
+             display: block;
+            margin: 0 auto;
+            
+        }
+        li:hover{
+            background-color: rgb(251, 251, 235);
+        }
+        li p{
+            color: grey;
+        }
+        li span{
+            font-weight: 700;
+        }
+        button{
+            margin-top: 10px;
+            padding: 20px;
+            background: blue;
+            color: white;
+            font-weight: 300;
+            font-size: medium;
+            border: none;
+            border-radius: 40px;
+            display: block;
+            margin: 0 auto;
+        }
+        body p{
+            text-align: center;
+            font-size: small;
+            font-family: monospace;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+   <h2 class="current-city"><span class="emoji">🌤️</span> <br>
+    Currently <span class="temp">25</span>° in <span class="city">Polokwane</span></h2> 
+
+   <ul>
+    <li>
+        <h5>🌧️Tommorow</h5>
+        <p>10° / <span>22°</span> </p>
+    </li>
+    <li>
+        <h5>🌥️Wednesday</h5>
+        <p>10° / <span>22°</span> </p>
+    </li>
+    <li>
+        <h5>☀️Thursday</h5>
+        <p>10° / <span>22°</span> </p>
+    </li>
+   </ul>
+   <button>Change city</button>
+   <p>coded by Mmaserufe Sekalo</p>
+   <script>
+    function handleEmoji(temp){
+        let emoji = document.querySelector(".emoji")
+        if (temp >= 22){
+            emoji.innerHTML = "😃"
+        }
+        else{
+            emoji.innerHTML = "😔"
+        }
+    }
+function handleCity(city){
+    let newCity = document.querySelector(".city")
+    newCity.innerHTML = city
+}
+function handleTemp(temp){
+    let newTemp = document.querySelector(".temp")
+    newTemp.innerHTML= temp
+}
+function handleClick(){
+let city = prompt("What city do you live in?")
+let temp = prompt("What temperature is it right now?")
+handleCity(city)
+handleTemp(temp)
+handleEmoji(temp)
+}
+
+    let button = document.querySelector("button")
+    button.addEventListener("click", handleClick)
+   </script>
+</body>
+</html>

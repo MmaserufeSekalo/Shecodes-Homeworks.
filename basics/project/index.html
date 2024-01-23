@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAn music history</title>
+    <style>
+      body {
+        background: linear-gradient(to left, #3a3939 0%, black 100%);
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+      }
+      .heading {
+        text-align: center;
+        margin-top: 30px;
+      }
+      .heading em {
+        font-size: 20px;
+        font-weight: 100;
+      }
+      .heading h1 {
+        font-weight: 100;
+      }
+
+      .horizontal1 {
+        width: 60%;
+      }
+      img {
+        max-width: 80%;
+        border-radius: 4px;
+      }
+      .vl {
+        position: relative;
+        left: 50%;
+        border-left: 3px dotted whitesmoke;
+        height: 40px; /* Set the height to cover the full height of the viewport */
+      }
+      .history-of-music-in-SA {
+        text-align: center;
+        margin: 40px 0 20px 0;
+      }
+      .century {
+        color: rgb(250, 245, 245);
+        margin: 30px 20px;
+      }
+
+      .century h4 {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px 0 10px 0;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .century p {
+        font-size: 14px;
+        font-weight: 100;
+        display: none;
+        opacity: 0;
+        transition: all 100s ease-out;
+        transition-delay: 2s;
+        padding: 0 30px 0 30px;
+      }
+
+      .century h4:hover + p {
+        display: block;
+        opacity: 1;
+      }
+      button {
+        padding: 20px 15px;
+        border: 1px solid rgb(250, 245, 245);
+        background: none;
+        color: rgb(250, 245, 245);
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 30px;
+        border-radius: 30px;
+      }
+      .buttons a {
+        padding: 20px 15px;
+        background: rgb(250, 245, 245);
+        color: rgb(9, 39, 30);
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+      .signature {
+        color: rgb(250, 245, 245);
+        font-size: x-small;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Music!</h1>
+      <h5><em>harmony, melody, rhythm...</em></h5>
+    </div>
+    <hr class="horizontal1" />
+    <div class="history-of-music-in-SA">
+      <div class="music-image">
+        <img
+          src="https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29575.jpg"
+          alt=""
+        />
+      </div>
+      <h2>History of music in South Africa</h2>
+      <span class="century">
+        <h4 class="the-sixteen-hundreds year">1600</h4>
+        <p>
+          The Khoi-Khoi developed the ramkie, a guitar with three or four
+          strings, based on that of Malabar slaves. They used it to blend Khoi
+          and Western folk songs.
+        </p>
+      </span>
+      <div class="vl"></div>
+      <span class="century">
+        <h4 class="the-eighteen-hundreds year">1800</h4>
+        <p>
+          In a style similar to that of British marching military bands,
+          coloured (mixed race) bands of musicians began parading through the
+          streets of Cape Town in the early 1820s, a tradition that was given
+          added impetus by the travelling minstrel shows of the 1880s. This
+          tradition has continued to the present day with the great carnival
+          held in Cape Town every New Year.
+        </p>
+      </span>
+      <div class="vl"></div>
+      <span class="century">
+        <h4 class="the-nineteen-hundreds year">1900</h4>
+        <p>
+          The tradition of minstrelsy, joined with other forms, contributed to
+          the development of isicathamiya. This music form had its first major
+          hit this year with the song "Mbube", an adaptation of a traditional
+          Zulu melody which has been recycled and reworked innumerable times
+          since then, often known as "The Lion Sleeps Tonight". Many other
+          bands, groups and individual artists' music was broadcasting od radios
+        </p>
+      </span>
+      <div class="vl"></div>
+      <span class="century">
+        <h4 class="the-two-thousands year">2000</h4>
+        <p>
+          Many music genres emerged, including but not limited to House, Deep
+          House, Kwaito, Gqcom, and Amapiano (most popular genre of South
+          African Origin).
+        </p>
+      </span>
+      <div class="buttons">
+        <button>We want to hear from you!</button>
+        <a
+          href="https://www.sahistory.org.za/article/development-music-south-africa-timeline-1600-2004"
+          >Learn more about SA music!</a
+        >
+      </div>
+      <footer>
+        <p class="signature">coded by Mmaserufe Sekalo</p>
+      </footer>
+    </div>
+    <script>
+      function handleButton() {
+        let season = prompt("what is your favorite season of the year");
+        let theirType = prompt(
+          "What type of music do you enjoy the most during your favorite season of the year?"
+        );
+        alert(`Enjoy ${theirType} music this ${season}`);
+      }
+
+      let bottomButton = document.querySelector("button");
+      bottomButton.addEventListener("click", handleButton);
+    </script>
+  </body>
+</html>
