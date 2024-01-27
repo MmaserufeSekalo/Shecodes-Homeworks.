@@ -167,7 +167,11 @@
         let theirType = prompt(
           "What type of music do you enjoy the most during your favorite season of the year?"
         );
-        alert(`Enjoy ${theirType} music this ${season}`);
+        if (season.length > 0 && theirType.length > 0) {
+          alert(`Enjoy ${theirType} music this ${season}`);
+        } else {
+          alert("Enjoy the rest of your day!");
+        }
       }
 
       let bottomButton = document.querySelector("button");
