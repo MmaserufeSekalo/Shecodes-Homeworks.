@@ -20,8 +20,8 @@ function cityInfo(response) {
   let date = new Date(response.data.dt * 1000);
   let hours = date.getHours();
   let mins = date.getMinutes();
-  if (mins < 10){
-    mins = `0${mins}`
+  if (mins < 10) {
+    mins = `0${mins}`;
   }
   let day = date.getDay();
   let currentDay = document.querySelector(".current-day");
@@ -53,6 +53,33 @@ function handleSubmit(event) {
   let city = input.value;
   searchCity(city);
 }
+//forecast loop
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast-day-list");
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"];
+  let forecastHtml = "";
+
+
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `  <li class="daily-forecast">
+                    <p class="forecast-day">${day}</p>
+                    <div class="min-max">
+                      <img
+                        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                        alt=""
+                      />
+                      <p class="min">12</p>
+                      <p class="max">28</p>
+                    </div>
+                  </li>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
 //form submit event listener
 let formSubmit = document.querySelector("#submit");
 formSubmit.addEventListener("click", handleSubmit);
+
+displayForecast()
