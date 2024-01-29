@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time zones</title>
+    <!--moments cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!--moments timezone-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <form action="">
+        <label for="countries">Country time-zone</label>
+        <select name="country-time-zone" id="countries">
+          <option value="select-country">Select country</option>
+          <option value="London">London</option>
+          <option value="Johannesburg">Johannesburg</option>
+          <option value="Dubai">Dubai</option>
+        </select>
+      </form>
+    </div>
+
+    <script>
+      function selectedCountry(event) {
+        let timezone = event.target.value;
+        if (timezone.length > 0) {
+
+       if (timezone === "London") {
+          console.log(1);
+          let londonTime = moment()
+            .tz("Europe/London")
+            .format("dddd, MMMM D, YYYY hh:mm a");
+          let londonString = `It is ${londonTime} in Europe/London`;
+          alert(londonString);
+        }
+
+        if (timezone === "Johannesburg") {
+          console.log(countrySelected);
+          let joburgTime = moment()
+            .tz("Africa/Johannesburg")
+            .format("dddd, MMMM D, YYYY hh:mm a");
+
+          let joburgString = `It is ${joburgTime} in Africa/Johannesburg`;
+          alert(joburgString);
+        }
+        
+        if (timezone === "Dubai") {
+          let dubaiTime = moment()
+            .tz("Asia/Dubai")
+            .format("dddd, MMMM D, YYYY hh:mm a");
+          let dubaiString = `It is  ${dubaiTime} in Asia/Dubai`;
+          alert(dubaiString);
+          console.log(1 + 1);
+        }
+        }
+      }
+
+      let country = document.querySelector("#countries");
+      country.addEventListener("change", selectedCountry);
+    </script>
+  </body>
+</html>
