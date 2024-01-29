@@ -86,7 +86,7 @@ function cityInfo(response) {
   let description = response.data.weather[0].description;
   let temperature = Math.round(response.data.main.temp);
 
-  if (!response.ok) {
+  if (response.ok) {
     weatherBox.innerHTML = ` <div class="not-found">
                 <div class="box">
                   <p>
@@ -135,6 +135,7 @@ function cityInfo(response) {
              
             </div>`;
     cityForecast.style.display = "block";
+     getForecast(response.data.name);
   }
 }
 function searchCity(city) {
@@ -152,7 +153,7 @@ function handleSubmit(event) {
   h1 =input.value;
   let city = input.value;
   searchCity(city);
-  getForecast(city);
+ 
 }
 //forecast loop
 //form submit event listener

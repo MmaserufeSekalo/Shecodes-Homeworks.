@@ -8,6 +8,10 @@ h2,
 h3 {
   font-family: "Roboto", sans-serif;
 }
+h3{
+  margin: 40px 0 ;
+  opacity: 0.2;
+}
 main {
   /*background-image: url("https://wallpapercave.com/wp/wp11035780.jpg");*/
   background-size: cover;
@@ -160,4 +164,9 @@ footer p{
 .bx-message-alt-error{
  
   font-size: 72px;
+}
+
+.box-1, .weather-forecast, .extras, .not-found{
+
+transition: all 200ms ease-in-out;
 }
