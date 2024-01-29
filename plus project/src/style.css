@@ -12,22 +12,25 @@ main {
   /*background-image: url("https://wallpapercave.com/wp/wp11035780.jpg");*/
   background-size: cover;
   background-position: center;
-  padding: 30px;
+  padding: 5px 30px;
+  max-width:700px;
+  margin: 0 auto;
 }
 .grid,
 .weather-forecast {
   position: relative;
   max-width: 320px;
-  min-height: 555px;
+  min-height: auto;
   background: rgba(145, 2, 145, 0.01);
   font-family: "Inter", sans-serif;
-  backdrop-filter: brightness(40%);
-  border-radius: 5px;
+  backdrop-filter: brightness(30%);
+  border-radius: 10px;
   padding: 20px;
   color: whitesmoke;
   text-align: center;
   border: 2px solid rgb(242, 232, 242);
   margin: 20px 0;
+ 
 }
 
 .search-box {
@@ -96,6 +99,7 @@ h1,
   font-weight: 300;
   position: relative;
   bottom: -30px;
+   padding-bottom: 30px;
 }
 .bx-wind,
 .bx-water {
@@ -136,4 +140,24 @@ ul li {
 h2 {
   opacity: 0.3;
   font-size: 30px;
+}
+
+
+footer p{
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+.not-found{
+  position: relative ;
+  top: 0;
+  right: 100px;
+  width: 100%;
+  text-align: center;
+  margin: 110px;
+  
+}
+.bx-message-alt-error{
+ 
+  font-size: 72px;
 }
